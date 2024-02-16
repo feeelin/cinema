@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 
 def profile(request):
-    return HttpResponse("Working")
+    return render(request, 'users/profile.html')

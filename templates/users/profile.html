@@ -1,5 +1,59 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-	Профиль пользователя
+    Профиль
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/users/profile.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="profile-container">
+        <form action="{% url 'users:profile' %}" method="post" class="profile-form">
+            <h1>Профиль</h1>
+            {% csrf_token %}
+            <div class="profile-form-field">
+                <label for="{{ form.username.id_for_label }}">Имя пользователя</label>
+                {{ form.username }}
+            </div>
+            <div class="profile-form-field">
+                <label for="{{ form.first_name.id_for_label }}">Имя</label>
+                {{ form.first_name }}
+            </div>
+            <div class="profile-form-field">
+                <label for="{{ form.last_name.id_for_label }}">Фамилия</label>
+                {{ form.last_name }}
+            </div>
+            <div class="profile-form-field">
+                <label for="{{ form.email.id_for_label }}">E-mail</label>
+                {{ form.email }}
+            </div>
+            <input class="btn btn-primary" type="submit" value="Сохранить">
+        </form>
+        <div class="profile-tickets-container">
+            <h1>Билеты</h1>
+            <div class="profile-ticket">
+                <div>
+                    <img class="profile-ticket-image" src="https://upload.wikimedia.org/wikipedia/ru/f/f1/Мастер_и_Маргарита_2023_Постер.jpg" alt="poster">
+                    <div class="profile-ticket-text">
+                        <p class="profile-ticket-title">Мастер и Маргарита</p>
+                        <div class="profile-ticket-info">
+                            <div>
+                               <p>06.12.2023 г.</p>
+                                <p>19:50</p>
+                                <p>18+</p> 
+                            </div>
+                            <div>
+                                2 ряд 3 место
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <a href='#' class="button">Открыть</a>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}

@@ -28,10 +28,19 @@ button{
     font-weight: bold;
 }
 
+.button{
+    padding: 1vh 1vw;
+    background-color: gold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 input{
     padding: 1vh 1vw;
     border-radius: 10px;
-    border: none;
+    border: 1px solid black;
 }
 
 input[type='submit']{
@@ -42,4 +51,8 @@ input[type='submit']{
     cursor: pointer;
     font-weight: bold;
     font-size: 2vh;
+}
+
+input[readonly]{
+    background-color: #d0d0d0;
 }

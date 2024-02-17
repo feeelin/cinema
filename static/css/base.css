@@ -12,7 +12,12 @@
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
 }
 
-.base-header > a{
+.base-active-link{
+    color: gold;
+    font-weight: bold;
+}
+
+.base-header-link{
     color: white;
 }
 
@@ -49,3 +54,9 @@
     gap: 2vw;
     flex-grow: 5;
 }
+
+.base-user-container{
+    display: flex;
+    gap: 2vw;
+}
+

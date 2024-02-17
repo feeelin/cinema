@@ -5,14 +5,18 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}{% endblock %}</title>
-    {% block style %}{% endblock %}
-    <link rel="stylesheet" href="{% static 'base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    {% block style %}{% endblock %}
 </head>
 <body>
     <header class="base-header">
-        <div class="base-title">
-            <h1>Cinema</h1>
+        <div class="base-header-left">
+            <div class="base-logo-container">
+            <img src="{% static 'img/logo.svg' %}" alt="logo" class="base-logo">
+            <p class="base-title">Cinema</p>
+        </div>
         <nav>
             <ul class="base-nav">
                 <li><a href="#">Расписание</a></li>
@@ -20,8 +24,10 @@
             </ul>
         </nav>
         </div>
-        <a href="#">Войти</a>
+        <a href="{% url 'users:login' %}">Войти</a>
     </header>
-    {% block content %}{% endblock %}
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 </body>
 </html>

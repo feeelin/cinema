@@ -1,0 +1,99 @@
+body{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: gold;
+}
+
+.base-container{
+    animation: appearance 1s forwards;
+
+    background-color: black;
+    color: white;
+    padding: 5vh 5vw;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+
+.base-container > h1{
+    text-align: center;
+}
+
+.base-logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.base-logo{
+    width: 4vw;
+    color: gold;
+}
+
+.base-title{
+    font-size: 2vw;
+    font-weight: bold;
+    color: gold;
+}
+
+.auth-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.auth-form > a{
+    color: white;
+}
+
+.auth-form > input[type='submit']{
+    margin-top: 2vh;
+}
+
+.auth-form-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2vw;
+}
+
+.alert {
+    background-color: gold;
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5vh 0.5vw;
+    gap: 1vw;
+    font-size: 1.5vh;
+    width: fit-content;
+}
+
+.close {
+    background-color: gold;
+    border-radius: 100%;
+    color: black;
+    text-align: center;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.alert-text{
+    width: 15vw;
+    text-wrap: normal;
+}

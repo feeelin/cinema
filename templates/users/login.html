@@ -1,0 +1,40 @@
+{% extends 'users/form.html' %}
+
+{% block title %}
+	Авторизация
+{% endblock %}
+
+{% block content %}
+    <h1>Авторизация</h1>
+    <div class="message">
+            {% if messages or form.non_field_errors %}
+                <div class="alert" id="alert">
+                    <p class="alert-text">
+                       {% if messages %}
+                        {% for message in messages %}
+                            {{ message }}
+                        {% endfor %}
+                    {% else %}
+                        {{ form.non_field_errors }}
+                    {% endif %} 
+                    </p>
+                        <button type="button" id="close" class="close" data-dismiss="alert" aria-label="Close">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+            {% endif %}
+        </div>
+    <form class='auth-form' action="{% url 'users:login' %}" method="post">
+        {% csrf_token %}
+        <div class="auth-form-field">
+            <label for="{{ form.username.id_for_label }}">Имя пользователя</label>
+            {{ form.username }}
+        </div>
+        <div class="auth-form-field">
+            <label for="{{ form.password.id_for_label }}">Пароль</label>
+            {{ form.password }}
+        </div>
+        <input class="btn btn-primary" type="submit" value="Войти">
+        <a style="text-align: center" href="{% url 'users:register' %}">Зарегистрироваться</a>
+    </form>
+{% endblock %}

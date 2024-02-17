@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/users/form.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    {% block style %}{% endblock %}
+</head>
+<body>
+    <div class="base-container">
+        <div class="base-logo-container">
+                <img src="{% static 'img/logo.svg' %}" alt="logo" class="base-logo">
+                <p class="base-title">Cinema</p>
+            </div>
+        {% block content %}{% endblock %}
+    </div>
+
+    <script src="{% static 'js/users/form.js' %}"></script>
+</body>
+</html>

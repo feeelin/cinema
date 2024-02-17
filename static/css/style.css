@@ -1,0 +1,45 @@
+@keyframes appearance {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+*{
+    font-family: Inter, serif;
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.5vh;
+}
+
+main{
+    padding: 5vh 5vw;
+}
+
+button{
+    padding: 1vh 1vw;
+    background-color: gold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input{
+    padding: 1vh 1vw;
+    border-radius: 10px;
+    border: none;
+}
+
+input[type='submit']{
+    padding: 1vh 1vw;
+    background-color: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 2vh;
+}

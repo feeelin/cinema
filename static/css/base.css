@@ -1,0 +1,51 @@
+/*header styles*/
+
+.base-header{
+    height: fit-content;
+    padding: 1vh 5vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: black;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.base-header > a{
+    color: white;
+}
+
+.base-nav{
+    display: flex;
+    list-style-type: none;
+    gap: 2vw;
+}
+
+.base-nav>li>a{
+    color: white;
+}
+
+.base-logo-container{
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.base-logo{
+    width: 4vw;
+    color: gold;
+}
+
+.base-title{
+    font-size: 2vw;
+    font-weight: bold;
+    color: gold;
+}
+
+.base-header-left{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    flex-grow: 5;
+}

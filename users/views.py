@@ -1,43 +1,31 @@
 from django.shortcuts import render, HttpResponseRedirect
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
-from django.contrib import auth, messages
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+# App services
+from users.services.update_user_profile import update_user_profile
+from users.services.logout_user import logout_user
+from users.services.login_user import login_user
+from users.services.register_new_user import register_new_user
 
 
 @login_required(login_url='users:login')
 def profile(request):
     if request.method == 'POST':
-        form = UserProfileForm(instance=request.user, data=request.POST)
-
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect(reverse('users:profile'))
+        return update_user_profile(user=request.user, data=request.POST)
     else:
         form = UserProfileForm(instance=request.user)
     return render(request, 'users/profile.html', {'form': form})
 
 
 def logout(request):
-    auth.logout(request)
-    messages.success(request, 'Вы вышли из аккаунта')
-    return HttpResponseRedirect(reverse('users:login'))
+    return logout_user(request)
 
 
 def login(request):
     if request.method == 'POST':
-        form = UserLoginForm(data=request.POST)
-        if form.is_valid():
-            username = request.POST['username']
-            password = request.POST['password']
-
-            user = auth.authenticate(username=username, password=password)
-
-            if user:
-                auth.login(request, user)
-                return HttpResponseRedirect(reverse('users:profile'))
+        return login_user(request)
     else:
         if request.user.is_authenticated:
             return HttpResponseRedirect(reverse('users:profile'))
@@ -48,12 +36,7 @@ def login(request):
 
 def register(request):
     if request.method == 'POST':
-        form = UserRegistrationForm(request.POST)
-
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Вы успешно зарегистрировались')
-            return HttpResponseRedirect(reverse('users:login'))
+        return register_new_user(request)
     else:
         form = UserRegistrationForm()
     return render(request, 'users/register.html', {'form': form})

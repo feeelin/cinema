@@ -27,10 +27,6 @@
     gap: 2vw;
 }
 
-.base-nav>li>a{
-    color: white;
-}
-
 .base-logo-container{
     display: flex;
     align-items: center;

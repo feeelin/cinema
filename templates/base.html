@@ -20,8 +20,20 @@
         </div>
         <nav>
             <ul class="base-nav">
-                <li><a href="#">Расписание</a></li>
-                <li><a href="#">Фильмы</a></li>
+                <li><a href="{% url 'movies:index' %}" 
+                   {% if request.path == '/' %}
+                    class="base-active-link"
+                   {% else %}
+                    class="base-header-link"
+                   {% endif %}
+                >Фильмы</a></li>
+                <li><a href="{% url 'movies:index' %}" 
+                   {% if request.path == '/movie/schedule' %}
+                    class="base-active-link"
+                   {% else %}
+                    class="base-header-link"
+                   {% endif %}
+                >Расписание</a></li>
             </ul>
         </nav>
         </div>

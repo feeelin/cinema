@@ -5,19 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f75334-52dc-4a2c-8181-453b197e8440" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cinema/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users/services/login_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/django.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/django.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/users/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/users/form.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/users/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/users/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/users/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/users/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +40,8 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -58,14 +66,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "django.template.preview.state": "SHOW_EDITOR",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "E:/cinema/static",
+    "last_opened_file_path": "E:/cinema/movies",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -77,6 +85,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\cinema\movies" />
+      <recent name="E:\cinema\tickets" />
       <recent name="E:\cinema\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -114,7 +124,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-7a29c1521ef0-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.298" />
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
       </set>
     </attachedChunks>
   </component>
@@ -133,6 +143,12 @@
       <workItem from="1708176388337" duration="35000" />
       <workItem from="1708176434376" duration="156000" />
       <workItem from="1708176602483" duration="17833000" />
+      <workItem from="1708256283770" duration="230000" />
+      <workItem from="1708256852380" duration="1014000" />
+      <workItem from="1708462855221" duration="28000" />
+      <workItem from="1708462951500" duration="18000" />
+      <workItem from="1708684352068" duration="2500000" />
+      <workItem from="1708689595329" duration="9341000" />
     </task>
     <servers />
   </component>

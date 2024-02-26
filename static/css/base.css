@@ -14,11 +14,13 @@
 
 .base-active-link{
     color: gold;
+    font-size: 2vh;
     font-weight: bold;
 }
 
 .base-header-link{
     color: white;
+    font-size: 2vh;
 }
 
 .base-nav{

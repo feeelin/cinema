@@ -18,7 +18,7 @@
                 <div class="movie-card-text-nonactive">
                     <p class="movie-title">{{ movie.title }}</p>
                     <p>с {{ movie.start_of_rolling_date }}</p>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href={% url 'movies:movie_page' movie_id=movie.id %} class="button">Подробнее</a>
                 </div>
             </div>
         {% endfor %}
@@ -31,7 +31,7 @@
                 <div class="movie-card-text-nonactive">
                     <p class="movie-title">{{ movie.title }}</p>
                     <p>с {{ movie.start_of_rolling_date }}</p>
-                    <a href="#" class="button">Подробнее</a>
+                    <a href="{% url 'movies:movie_page' movie_id=movie.id %}" class="button">Подробнее</a>
                 </div>
             </div>
         {% endfor %}

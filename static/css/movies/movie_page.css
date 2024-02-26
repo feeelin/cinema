@@ -1,0 +1,43 @@
+.movie-container{
+    display: flex;
+    gap: 2vw;
+}
+
+.movie-title-container{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.movie-image{
+    height: 75vh;
+    border-radius: 10px;
+}
+
+.movie-fields-container{
+    display: flex;
+    padding: 3vh 0;
+
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.movie-field {
+    display: flex;
+    gap: 2vw;
+}
+
+.movie-field-title{
+    font-weight: bold;
+    width: 100px;
+}
+
+.movie-description{
+    text-align: justify;
+}
+
+.movie-buy-button{
+    align-self: flex-start;
+    font-size: 1vw;
+}
+

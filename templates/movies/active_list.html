@@ -12,7 +12,8 @@
 {% block content %}
     <h1>Сейчас в кино</h1>
     <div class="movies-container">
-        {% for movie in current_movies %}
+    {% if current_movies %}
+    	{% for movie in current_movies %}
             <div class="movie-card" id="movieCard" onmouseover="showCardInfo(event)" onmouseleave="closeCardInfo(event)">
                 <img class='movie-image' src="{{ movie.image.url }}" alt="{{ movie.title }}">
                 <div class="movie-card-text-nonactive">
@@ -22,9 +23,13 @@
                 </div>
             </div>
         {% endfor %}
+    {% else %}
+        <p>Пока ничего нет</p>
+    {% endif %}
     </div>
     <h1>Скоро в кино</h1>
     <div class="movies-container">
+    {% if next_movies %}
         {% for movie in next_movies %}
             <div class="movie-card" id="movieCard" onmouseover="showCardInfo(event)" onmouseleave="closeCardInfo(event)">
                 <img class='movie-image' src="{{ movie.image.url }}" alt="{{ movie.title }}">
@@ -35,6 +40,10 @@
                 </div>
             </div>
         {% endfor %}
+    {% else %}    
+        <p>Пока ничего нет</p>
+    {% endif %} 
+        
     </div>
 
     <script src="{% static 'js/movies/active_list.js' %}"></script>

@@ -53,7 +53,26 @@
         </div>
     </header>
     <main>
+    <div class="base-content-container">
         {% block content %}{% endblock %}
+    </div>
+
     </main>
+    <footer class="base-footer">
+        <div class="base-logo-container">
+            <img src="{% static 'img/logo.svg' %}" alt="logo" class="base-logo">
+            <p class='base-title'>Cinema</p>
+        </div>
+        <nav>
+            <ul class="base-footer-nav">
+                <h3 class="white">Разделы</h3>
+                <li><a class="base-footer-link" href="#">Фильмы</a></li>
+                <li><a class="base-footer-link" href="#">Расписание</a></li>
+                {% if request.user.is_authenticated %}
+                <li><a class="base-footer-link" href="#">Профиль</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

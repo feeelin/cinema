@@ -58,3 +58,28 @@
     gap: 2vw;
 }
 
+.base-content-container{
+    min-height: 77vh;
+}
+
+.base-footer{
+    padding: 5vh 5vw;
+    background-color: black;
+    justify-self: flex-end;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.base-footer-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.base-footer-link{
+    color: white;
+    font-size: 2vh;
+}
+
+

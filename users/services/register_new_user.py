@@ -11,3 +11,6 @@ def register_new_user(request):
         form.save()
         messages.success(request, 'Вы успешно зарегистрировались')
         return HttpResponseRedirect(reverse('users:login'))
+
+    messages.error(request, 'Возникла ошибка')
+    return HttpResponseRedirect(reverse('users:register'))

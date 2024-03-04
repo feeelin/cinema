@@ -7,15 +7,14 @@
     <list default="true" id="02f75334-52dc-4a2c-8181-453b197e8440" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/movies/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/movies/active_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movies/active_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/register_new_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/services/register_new_user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +62,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "settings.editor.selected.configurable": "configurable.group.project",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
       "2df13661-76a1-4661-98c5-43ace074a99d",
-      "sqlite"
+      "sqlite",
+      "sqlserver"
     ]
   }
 }]]></component>
@@ -140,6 +140,10 @@
       <workItem from="1708684352068" duration="2500000" />
       <workItem from="1708689595329" duration="9341000" />
       <workItem from="1708940886057" duration="4721000" />
+      <workItem from="1709055521594" duration="441000" />
+      <workItem from="1709227929555" duration="141000" />
+      <workItem from="1709534978322" duration="475000" />
+      <workItem from="1709535723901" duration="7855000" />
     </task>
     <servers />
   </component>

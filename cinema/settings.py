@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'tickets',
-    'movies'
+    'movies',
+    'screenings'
 ]
 
 MIDDLEWARE = [
@@ -79,9 +80,8 @@ DATABASES = {
         'ENGINE': 'mssql',
         'NAME': 'cinema',
         'USER': 'SA',
-        'PASSWORD': 'feelin2024_LOL',
-        'HOST': 'localhost',
-        'PORT': 1433,
+        'PASSWORD': 'feelinMSSQL_2024',
+        'HOST': 'feelindev.ru',
         'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
     }
 }

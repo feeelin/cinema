@@ -1,13 +1,36 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    Расписание - Cinema
+    Расписание всех сеансов
 {% endblock %}
 
 {% block style %}
-	
+    <link rel="stylesheet" href="{% static 'css/screenings/schedule.css'%}">
 {% endblock %}
 
 {% block content %}
-	<h1>Расписание</h1>
+	<h1>Расписание всех сеансов</h1>
+    <div class="schedule-container">
+        {% for time in time %}
+            <h2>{{ time|date:"j E" }}</h2>
+            {% for screening in screenings %}
+                {% if screening.time.date == time %}
+                    <div class="screening-card">
+                    <div class="screening-card-title-container">
+                        <p class="screening-card-title">{{ screening.time|date:"G:i" }}</p>
+                        <p class="screening-card-title">{{ screening.film_id }}</p>
+                    </div>
+                    <div class="screening-card-buttons-container">
+                        <a href="/movie/{{ screening.film_id_id }}" class="button">О фильме</a>
+                        <a href="#" class="button">Купить билет</a>
+                    </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+        {% endfor %}
+    </div>
+
+
 {% endblock %}

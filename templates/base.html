@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}{% endblock %} - Cinema</title>
     <link rel="shortcut icon" href="{% static 'img/logo.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
@@ -27,8 +27,8 @@
                     class="base-header-link"
                    {% endif %}
                 >Фильмы</a></li>
-                <li><a href="{% url 'movies:index' %}" 
-                   {% if request.path == '/movie/schedule' %}
+                <li><a href="{% url 'screenings:schedule' %}" 
+                   {% if request.path == '/screenings/schedule/' %}
                     class="base-active-link"
                    {% else %}
                     class="base-header-link"
@@ -67,7 +67,7 @@
             <ul class="base-footer-nav">
                 <h3 class="white">Разделы</h3>
                 <li><a class="base-footer-link" href="{% url 'movies:index' %}">Фильмы</a></li>
-                <li><a class="base-footer-link" href="#">Расписание</a></li>
+                <li><a class="base-footer-link" href="{% url 'screenings:schedule' %}">Расписание</a></li>
                 {% if request.user.is_authenticated %}
                 <li><a class="base-footer-link" href="{% url 'users:profile' %}">Профиль</a></li>
                 {% endif %}

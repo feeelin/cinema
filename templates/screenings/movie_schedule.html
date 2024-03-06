@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/screenings/movie_schedule.css' %}">
+{% endblock %}
+
+{% block title %}
+	Расписание сеансов на фильм {{ movie.title }} 
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="schedule-container">
+        <h1>Расписание сеансов</h1>
+        {% if time %}
+            {% for time in time %}
+                <h2>{{ time|date:"j E" }}</h2>
+                <div class="schedule-buttons-container">
+                {% for screening in screenings %}
+                    {% if screening.time.date == time %}
+                        <a href="#" class="button">{{ screening.time|date:"G:i" }}</a>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p><b>Сеансов нет</b></p>
+        {% endif %}
+        </div>
+        <div class="movie-card">
+            <img class="movie-image" src="{{ movie.image.url }}" alt="{{ movie.title }}">
+            <div class="movie-text-container">
+                <div class="movie-card-title-container">
+                <p class="movie-card-title">{{ movie.title }}</p>
+                <p>{{ movie.age_restriction }}+</p>
+            </div>
+            <p>{{ movie.genre }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

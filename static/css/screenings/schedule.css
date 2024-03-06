@@ -1,0 +1,33 @@
+.schedule-container{
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.screening-card{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1vw;
+
+    background-color: black;
+    padding: 2vh 2vw;
+    border-radius: 30px;
+}
+
+.screening-card-title{
+    font-weight: bold;
+    font-size: 2vh;
+    color: white;
+}
+
+.screening-card-title-container{
+    display: flex;
+    gap: 1vw;
+}
+
+.screening-card-buttons-container{
+    display: flex;
+    gap: 1vw;
+}

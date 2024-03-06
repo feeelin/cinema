@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+}
+
+.movie-card{
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 2vh;
+}
+
+.movie-card-title-container{
+    display: flex;
+    gap: 1vw;
+    height: fit-content;
+    align-items: center;
+}
+
+.movie-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.movie-image{
+    height: 15vh;
+    border-radius: 10px;
+}
+
+.movie-card-title{
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.schedule-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.schedule-buttons-container{
+    display: flex;
+    gap: 1vw;
+    flex-wrap: wrap;
+}

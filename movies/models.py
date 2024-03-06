@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from screenings.models import Screening
 
 # Create your models here.
 
@@ -16,4 +17,8 @@ class Movie(models.Model):
     end_of_rolling_date = models.DateField(null=False, blank=False, default=timezone.now)
 
     def __str__(self):
-        return f'{self.title} - {self.director}'
+        return f'{self.title}'
+
+    def get_sessions_count(self):
+        return Screening.objects.filter(film_id__id=self.id).count()
+

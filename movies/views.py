@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.utils import timezone
 from movies.models import Movie
 from django.http import Http404
 
@@ -16,7 +15,6 @@ def active_movies_list(request):
 
 
 def movie_page(request, movie_id):
-    movie = Movie.objects.get(id=movie_id)
     try:
         movie = Movie.objects.get(id=movie_id)
         return render(request, 'movies/movie_page.html', {'movie': movie})

@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block title %}
-	{{ movie.title }} - Cinema
+	{{ movie.title }}
 {% endblock %}
 
 {% block content %}
@@ -31,9 +31,9 @@
                     <p>{{ movie.duration }} минут</p>
                 </div>
                 <p class="movie-description">{{ movie.description }}</p>
-{#                {% if movie.start_of_rolling_date__lt==timezone.now() and movie.end_of_rolling_date__gt==timezone.now() %}#}
-                    <a href="#" class="button movie-buy-button">Купить билеты</a>
-{#                {% endif %} #}
+                {% if movie.get_sessions_count %}
+                <a href="{% url 'screenings:film_schedule' movie=movie.id %}" class="button movie-buy-button">Купить билеты</a>
+                {% endif %}
             </div>
         </div>
     </div>

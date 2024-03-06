@@ -80,6 +80,19 @@
 .base-footer-link{
     color: white;
     font-size: 2vh;
+
+    display: flex;
+    gap: 0.5vw;
+    align-items: center;
+}
+
+.base-footer-nav-container{
+    display: flex;
+    gap: 10vw;
+}
+
+.base-nav-icon{
+    width: 1vw;
 }
 
 

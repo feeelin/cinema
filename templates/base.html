@@ -63,14 +63,19 @@
             <img src="{% static 'img/logo.svg' %}" alt="logo" class="base-logo">
             <p class='base-title'>Cinema</p>
         </div>
-        <nav>
+        <nav class="base-footer-nav-container">
             <ul class="base-footer-nav">
                 <h3 class="white">Разделы</h3>
-                <li><a class="base-footer-link" href="#">Фильмы</a></li>
+                <li><a class="base-footer-link" href="{% url 'movies:index' %}">Фильмы</a></li>
                 <li><a class="base-footer-link" href="#">Расписание</a></li>
                 {% if request.user.is_authenticated %}
-                <li><a class="base-footer-link" href="#">Профиль</a></li>
+                <li><a class="base-footer-link" href="{% url 'users:profile' %}">Профиль</a></li>
                 {% endif %}
+            </ul>
+            <ul class="base-footer-nav">
+                <h3 class="white">Ссылки</h3>
+                <li><a class="base-footer-link" href="https://github.com/feeelin"><img class="base-nav-icon" src="{% static 'img/github-logo.svg' %}" alt="gh">Github</a></li>
+                <li><a class="base-footer-link" href="https://t.me/feelindev"><img class="base-nav-icon" src="{% static 'img/telegram-logo.svg' %}" alt="tg">Telegram</a></li>
             </ul>
         </nav>
     </footer>

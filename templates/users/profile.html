@@ -34,25 +34,31 @@
         </form>
         <div class="profile-tickets-container">
             <h1>Билеты</h1>
+        {% if tickets %}
+            {% for ticket in tickets %}
             <div class="profile-ticket">
                 <div>
-                    <img class="profile-ticket-image" src="https://upload.wikimedia.org/wikipedia/ru/f/f1/Мастер_и_Маргарита_2023_Постер.jpg" alt="poster">
+                    <img class="profile-ticket-image" src="{{ ticket.screening.film_id.image.url }}" alt="poster">
                     <div class="profile-ticket-text">
-                        <p class="profile-ticket-title">Мастер и Маргарита</p>
+                        <p class="profile-ticket-title">{{ ticket.screening.film_id.title }}</p>
                         <div class="profile-ticket-info">
                             <div>
-                               <p>06.12.2023 г.</p>
-                                <p>19:50</p>
-                                <p>18+</p> 
+                               <p>{{ ticket.screening.time|date:"j E"}} </p>
+                                <p>{{ ticket.screening.time|date:"H:i"}}</p>
+                                <p>{{ ticket.screening.film_id.age_restriction}}+</p>
                             </div>
                             <div>
-                                2 ряд 3 место
+                                {{ ticket.row }} ряд {{ ticket.place }} место
                             </div>
                         </div>
                     </div> 
                 </div>
-                <a href='#' class="button">Открыть</a>
+                <a href='{% url 'tickets:ticket_page' ticket_id=ticket.id %}' class="button">Открыть</a>
             </div>
+            {% endfor %}
+        {% else %}
+        <p>Пока пусто</p>
+        {% endif %}
         </div>
     </div>
 

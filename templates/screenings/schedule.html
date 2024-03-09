@@ -12,6 +12,7 @@
 {% block content %}
 	<h1>Расписание всех сеансов</h1>
     <div class="schedule-container">
+    {% if time %}
         {% for time in time %}
             <h2>{{ time|date:"j E" }}</h2>
             {% for screening in screenings %}
@@ -28,8 +29,10 @@
                     </div>
                 {% endif %}
             {% endfor %}
-
         {% endfor %}
+    {% else %}
+        <p>Сеансов нет</p>
+    {% endif %}
     </div>
 
 

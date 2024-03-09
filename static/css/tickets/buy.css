@@ -1,0 +1,96 @@
+.container{
+    display: flex;
+    height: 65vh;
+    gap: 5vw;
+}
+
+.tickets-form{
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+    align-items: flex-end;
+}
+
+.tickets-row-number{
+    width: 2vw;
+    text-align: end;
+}
+
+.tickets-place-number{
+    width: 2vw;
+    text-align: center;
+}
+
+.tickets-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5vw;
+    margin-bottom: 0.5vh;
+}
+
+.tickets-complete-button{
+    width: 7vw;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+input[type=checkbox]{
+    -webkit-appearance: none;
+    width: 1vw;
+    height: 2vw;
+    background: gold;
+    border: none;
+}
+
+input[type=checkbox][disabled]{
+    -webkit-appearance: none;
+    width: 1vw;
+    height: 2vw;
+    background: white;
+}
+
+input[type=checkbox]:checked{
+    -webkit-appearance: none;
+    width: 1vw;
+    height: 2vw;
+    background: black;
+}
+
+.movie-card{
+    display: flex;
+    gap: 2vw;
+    margin-bottom: 2vh;
+}
+
+.movie-card-title-container{
+    display: flex;
+    gap: 1vw;
+    height: fit-content;
+    align-items: center;
+}
+
+.movie-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.movie-image{
+    height: 15vh;
+    border-radius: 10px;
+}
+
+.movie-card-title{
+    font-weight: bold;
+    font-size: 3vh;
+}
+
+.tickets-right-side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

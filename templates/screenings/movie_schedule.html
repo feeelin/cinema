@@ -19,7 +19,7 @@
                 <div class="schedule-buttons-container">
                 {% for screening in screenings %}
                     {% if screening.time.date == time %}
-                        <a href="#" class="button">{{ screening.time|date:"G:i" }}</a>
+                        <a href="{% url 'tickets:buy' screening_id=screening.id %}" class="button">{{ screening.time|date:"G:i" }}</a>
                     {% endif %}
                 {% endfor %}
                 </div>

@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    gap: 3vw;
+}
+
+.ticket-image{
+    width: 10vw;
+    border-radius: 10px;
+}
+
+.ticket-data-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ticket-title-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.ticket-number-container{
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.ticket-number-label{
+    font-size: 2vh;
+}
+
+.ticket-number{
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.ticket-place-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+.disclaimer{
+    font-size: 1vh;
+}

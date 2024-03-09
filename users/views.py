@@ -1,4 +1,8 @@
 from django.shortcuts import render, HttpResponseRedirect
+
+from movies.models import Movie
+from tickets.models import Ticket
+from tickets.services.flatten import flatten
 from users.forms import UserLoginForm, UserRegistrationForm, UserProfileForm
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
@@ -16,7 +20,15 @@ def profile(request):
         return update_user_profile(user=request.user, data=request.POST)
     else:
         form = UserProfileForm(instance=request.user)
-    return render(request, 'users/profile.html', {'form': form})
+
+    tickets = Ticket.objects.filter(user=request.user).select_related('screening').order_by('-screening__time')
+
+    context = {
+        'form': form,
+        'tickets': tickets,
+    }
+
+    return render(request, 'users/profile.html', context)
 
 
 def logout(request):

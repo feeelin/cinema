@@ -1,0 +1,39 @@
+{% extends 'users/form.html' %}
+{% load static %}
+
+{% block title %}
+	Билет на фильм "{{ ticket.screening.film_id.title }}"
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/tickets/ticket_page.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <img class="ticket-image" src="{{ ticket.screening.film_id.image.url }}" alt="{{ ticket.screening.film_id.title }}">
+        <div class="ticket-data-container">
+            <div class="ticket-place-container">
+                <div class="ticket-title-container">
+                <h1>{{ ticket.screening.film_id.title }}</h1>
+                <p>{{ ticket.screening.film_id.age_restriction }}+</p>
+            </div>
+            <div>
+                <p>{{ ticket.screening.time|date:"j E" }} - {{ ticket.screening.time|date:"H:i" }}</p>
+                <p>{{ ticket.screening.hall }} зал, {{ ticket.row }} ряд, {{ ticket.place }} место</p>
+            </div>
+            </div>
+            <div>
+                <div class="ticket-number-container">
+                    <p class="ticket-number-label">Номер билета: </p>
+                    <p class="ticket-number">{{ ticket.id }}</p>
+                </div>
+                <p class="disclaimer">Никому не раскрывайте номер своего билета</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+{% endblock %}

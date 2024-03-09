@@ -10,7 +10,7 @@ import itertools
 
 
 def screenings_schedule(request):
-    screenings = Screening.objects.order_by('time')
+    screenings = Screening.objects.order_by('time').filter(time__gt=timezone.now())
     screenings_time = list(set(map(lambda x: x[0].date(), screenings.values_list('time'))))
 
     context = {
@@ -23,7 +23,7 @@ def screenings_schedule(request):
 
 def movie_screenings_schedule(request, movie):
     movie = Movie.objects.get(pk=movie)
-    screenings = Screening.objects.filter(film_id=movie.id).order_by('time')
+    screenings = Screening.objects.filter(film_id=movie.id).order_by('time').filter(time__gt=timezone.now())
     screenings_time = list(set(map(lambda x: x[0].date(), screenings.values_list('time'))))
 
     context = {

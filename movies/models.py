@@ -20,5 +20,5 @@ class Movie(models.Model):
         return f'{self.title}'
 
     def get_sessions_count(self):
-        return Screening.objects.filter(film_id__id=self.id).count()
+        return Screening.objects.filter(film_id__id=self.id).filter(time__gt=timezone.now()).count()
 

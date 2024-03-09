@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+	Купить билеты
+{% endblock %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'css/tickets/buy.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form class="tickets-form" method="post">
+            {% csrf_token %}
+            <div class="tickets-row">
+                <p class="tickets-place-number"></p>
+                {% for place in tickets.1 %}
+                        <p class="tickets-place-number">{{ place.2 }}</p>
+                {% endfor %}
+            </div>
+            {% for row in tickets.values %}
+                <div class="tickets-row">
+                    <p class="tickets-row-number">{{ row.0.1 }}</p>
+                    {% for place in row %}
+                        {% if place.0 %}
+                            <input name="place" class="tickets-place" type="checkbox" value="{{ place.1 }} {{ place.2 }}">
+                        {% else %}
+                            <input class=tickets-place" type="checkbox" disabled>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <div class="tickets-row">
+                <button class="tickets-complete-button">Купить</button>
+            </div>
+        </form>
+        <div class="tickets-right-side">
+            <div class="movie-card">
+                <img class="movie-image" src="{{ screening.film_id.image.url }}" alt="{{ screening.film_id.title }}">
+                <div class="movie-text-container">
+                    <div class="movie-card-title-container">
+                    <p class="movie-card-title">{{ screening.film_id.title }}</p>
+                    <p>{{ screening.film_id.age_restriction }}+</p>
+                </div>
+                <p>{{ screening.film_id.genre }}</p>
+                <p>{{ screening.time|date:"j E - H:i" }} - {{ screening.hall }} зал</p>
+                <p><span id="price">{{ screening.price }}</span> рублей</p>
+                </div>
+            </div>
+            <p id="price-output"></p>
+        </div>
+    </div>
+{% endblock %}

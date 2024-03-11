@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f75334-52dc-4a2c-8181-453b197e8440" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tickets/services/flatten.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/django.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/django.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
@@ -47,6 +46,8 @@
       <change beforePath="$PROJECT_DIR$/static/css/screenings/movie_schedule.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screenings/movie_schedule.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/screenings/schedule.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/screenings/schedule.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/tickets/buy.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/tickets/buy.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/tickets/ticket_page.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/tickets/ticket_page.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/users/form.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/users/form.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/users/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/users/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/img/github-logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/static/img/github-logo.svg" afterDir="false" />
@@ -58,15 +59,23 @@
       <change beforePath="$PROJECT_DIR$/templates/movies/movie_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/movies/movie_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/screenings/movie_schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/screenings/movie_schedule.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/screenings/schedule.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/screenings/schedule.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tickets/buy.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tickets/buy.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tickets/ticket_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tickets/ticket_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/form.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickets/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickets/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0002_remove_ticket_film.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/migrations/0002_remove_ticket_film.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0003_ticket_film.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/migrations/0003_ticket_film.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0004_remove_ticket_film.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/migrations/0004_remove_ticket_film.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickets/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/flatten.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/services/flatten.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/get_tickets_list_by_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/services/get_tickets_list_by_user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/save_users_tickets.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/services/save_users_tickets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/ticketsCollector.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/services/ticketsCollector.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickets/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tickets/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tickets/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tickets/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
@@ -74,7 +83,6 @@
       <change beforePath="$PROJECT_DIR$/users/services/logout_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/services/logout_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/services/register_new_user.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/services/register_new_user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/services/update_user_profile.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/services/update_user_profile.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,9 +96,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="Python Script" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -210,7 +219,8 @@
       <workItem from="1709634400326" duration="1014000" />
       <workItem from="1709896692435" duration="4574000" />
       <workItem from="1709992676809" duration="5461000" />
-      <workItem from="1710003946401" duration="3138000" />
+      <workItem from="1710003946401" duration="5462000" />
+      <workItem from="1710150906812" duration="1303000" />
     </task>
     <servers />
   </component>

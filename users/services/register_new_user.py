@@ -3,16 +3,15 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from users.forms import UserRegistrationForm
 from users.models import User
-from django.conf import settings
-import logging
+from users.services.auth_logging import log_auth, AuthLoggingAction
 
 
-def register_new_user(request):
+def register_new_user(request) -> HttpResponseRedirect:
     form = UserRegistrationForm(request.POST)
 
     if form.is_valid():
         form.save()
-        _log_user_registration(User.objects.get(username=form.username))
+        log_auth(User.objects.get(username=form.username), AuthLoggingAction.REG)
         messages.success(request, 'Вы успешно зарегистрировались')
         return HttpResponseRedirect(reverse('users:login'))
 
@@ -20,7 +19,5 @@ def register_new_user(request):
     return HttpResponseRedirect(reverse('users:register'))
 
 
-def _log_user_registration(user: User) -> None:
-    logging.basicConfig(level=logging.INFO, filename=settings.LOGS_ROOT / 'auth.log', filemode='w')
-    logging.info(f'REGISTRATION {user.username} ID {user.id}')
+
 

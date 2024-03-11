@@ -2,12 +2,10 @@ from django.contrib import auth, messages
 from django.http import HttpResponseRedirect
 from django.urls import reverse
 from users.forms import UserLoginForm
-from users.models import User
-from django.conf import settings
-import logging
+from users.services.auth_logging import log_auth, AuthLoggingAction
 
 
-def login_user(request):
+def login_user(request) -> HttpResponseRedirect:
     form = UserLoginForm(data=request.POST)
     if form.is_valid():
         username = request.POST['username']
@@ -17,13 +15,11 @@ def login_user(request):
 
         if user:
             auth.login(request, user)
-            _log_user_auth(user)
+            log_auth(request.user, AuthLoggingAction.LOGIN)
             return HttpResponseRedirect(reverse('users:profile'))
     messages.error(request, 'Пользователь не найден')
     return HttpResponseRedirect(reverse('users:login'))
 
 
-def _log_user_auth(user: User) -> None:
-    logging.basicConfig(level=logging.INFO, filename=settings.LOGS_ROOT / 'auth.log', filemode='w')
-    logging.info(f'LOGIN {user.username} ID {user.id}')
+
 

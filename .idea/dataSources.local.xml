@@ -14,21 +14,5 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="mssql docker" uuid="49bfb978-c3c4-4b4f-bbc9-cae4bf923ccc">
-      <database-info product="Microsoft SQL Server" version="16.00.4105" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 12.2 for SQL Server" driver-version="12.2.0.0" dbms="MSSQL" exact-version="16.0.4105" exact-driver-version="12.2">
-        <extra-name-characters>$#@</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
-      <secret-storage>master_key</secret-storage>
-      <user-name>SA</user-name>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="database" qname="@">
-            <node kind="schema" qname="@" />
-          </node>
-        </introspection-scope>
-      </schema-mapping>
-    </data-source>
   </component>
 </project>

@@ -2,7 +2,7 @@ from django.shortcuts import render
 from movies.models import Movie
 from django.http import Http404
 
-# Services
+# App services
 from movies.services.get_current_and_next_movies import get_current_and_next_movies
 
 

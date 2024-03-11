@@ -1,35 +1,28 @@
 from django.shortcuts import render
-from django.utils import timezone
 
-from movies.models import Movie
-from screenings.models import Screening
-import itertools
-
-
-# Create your views here.
+# App services
+from screenings.services.get_valid_screenings_with_time import get_valid_screenings_with_time
+from screenings.services.get_valid_screenings_with_time_by_movie import get_valid_movie_screenings_with_time
 
 
 def screenings_schedule(request):
-    screenings = Screening.objects.order_by('time').filter(time__gt=timezone.now())
-    screenings_time = list(set(map(lambda x: x[0].date(), screenings.values_list('time'))))
 
+    screenings = get_valid_screenings_with_time()
     context = {
-        'screenings': screenings,
-        'time': screenings_time
+        'screenings': screenings.screenings,
+        'time': screenings.screenings_time
     }
 
     return render(request, 'screenings/schedule.html', context)
 
 
 def movie_screenings_schedule(request, movie):
-    movie = Movie.objects.get(pk=movie)
-    screenings = Screening.objects.filter(film_id=movie.id).order_by('time').filter(time__gt=timezone.now())
-    screenings_time = list(set(map(lambda x: x[0].date(), screenings.values_list('time'))))
+    valid_screenings = get_valid_movie_screenings_with_time(movie)
 
     context = {
-        'movie': movie,
-        'screenings': screenings,
-        'time': screenings_time
+        'movie': valid_screenings.movie,
+        'screenings': valid_screenings.screenings,
+        'time': valid_screenings.screenings_time
     }
 
     return render(request, 'screenings/movie_schedule.html', context)

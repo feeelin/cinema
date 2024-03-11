@@ -16,15 +16,15 @@
             <div class="tickets-row">
                 <p class="tickets-place-number"></p>
                 {% for place in tickets.1 %}
-                        <p class="tickets-place-number">{{ place.2 }}</p>
+                        <p class="tickets-place-number">{{ place.place }}</p>
                 {% endfor %}
             </div>
             {% for row in tickets.values %}
                 <div class="tickets-row">
-                    <p class="tickets-row-number">{{ row.0.1 }}</p>
+                    <p class="tickets-row-number">{{ row.0.row }}</p>
                     {% for place in row %}
-                        {% if place.0 %}
-                            <input name="place" class="tickets-place" type="checkbox" value="{{ place.1 }} {{ place.2 }}">
+                        {% if not place.is_taken %}
+                            <input name="place" class="tickets-place" type="checkbox" value="{{ place.row }} {{ place.place }}">
                         {% else %}
                             <input class=tickets-place" type="checkbox" disabled>
                         {% endif %}

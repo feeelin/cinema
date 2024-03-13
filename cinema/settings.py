@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-7-a@eb9$+hoho021q$euaq^ieoai@=070r-j&$lgnja^d2xu3&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 
 # Application definition
 
@@ -78,12 +78,14 @@ WSGI_APPLICATION = 'cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
+        'ENGINE': 'sql_server.pyodbc',
         'NAME': 'cinema',
         'USER': 'SA',
         'PASSWORD': 'feelinMSSQL_2024',
         'HOST': 'feelindev.ru',
-        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
+        'OPTIONS': {'driver': 'SQL Server Native Client 11.0',
+                    'MARS_Connection': True,
+                    'driver_supports_utf8': True,}
     }
 }
 

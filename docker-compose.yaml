@@ -12,11 +12,15 @@ services:
       - SA_PASSWORD=feelinMSSQL_2024
 
   web:
-    build: ./
-    command: python manage.py runserver 0.0.0.0:8000
+    build: ./web_django
+    command: sh -c "python manage.py makemigrations &&
+                    python manage.py migrate &&
+                    python manage.py collectstatic &&
+                    gunicorn web.wsgi:application --bind 0.0.0.0:8000"
     volumes:
-      - .:/web_django
-    ports:
-      - '8000:8000'
+      - app:/web_django
+    expose:
+      - 8000
+    restart: "on-failure"
     depends_on:
       - mssql

@@ -82,7 +82,8 @@ DATABASES = {
         'NAME': 'cinema',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'HOST': 'mssql.feelindev.ru'
+        'HOST': 'mssql.feelindev.ru',
+        'PORTS': '1432'
     }
 }
 

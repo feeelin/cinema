@@ -1,15 +1,16 @@
 version: '3'
 services:
   
-  mssql:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+  postgres:
+    image: postgres
     ports:
-      - 1433:1433
+      - "1433:1433"
     volumes:
-      - ~/apps/mssql/data:/var/lib/mssqlql/data
+      - /var/lib/postgresql/data
     environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=feelinMSSQL_2024
+      POSTGRES_DB: "cinema"
+      POSTGRES_USER: "admin"
+      POSTGRES_PASSWORD: "admin"
 
   web:
     build: ./
@@ -23,4 +24,4 @@ services:
       - 8000
     restart: "on-failure"
     depends_on:
-      - mssql
+      - postgres

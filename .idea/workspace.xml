@@ -5,8 +5,75 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02f75334-52dc-4a2c-8181-453b197e8440" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/cinema.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cinema.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0d12ab5d-2a96-4e9d-83ac-c00f098b0a44.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/cinema/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cinema/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/0002_movie_end_of_rolling_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/0003_alter_movie_end_of_rolling_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/0004_movie_start_of_rolling_date.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/services/get_current_and_next_movies.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screenings/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0002_remove_ticket_film.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0003_ticket_film.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/0004_remove_ticket_film.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/get_flatten_collection_generator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/get_tickets_by_screening_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/get_user_tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/services/save_users_tickets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tickets/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/auth_logging.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/login_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/logout_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/register_new_user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/services/update_user_profile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,41 +106,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.cinema.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/cinema/static/img&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.project&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.cinema.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "django-restart",
+    "last_opened_file_path": "D:/cinema-rebuild/cinema/users",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.project",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;2df13661-76a1-4661-98c5-43ace074a99d&quot;,
-      &quot;sqlite&quot;,
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "2df13661-76a1-4661-98c5-43ace074a99d",
+      "sqlite",
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\cinema-rebuild\cinema\users" />
+      <recent name="D:\cinema-rebuild\cinema\tickets" />
+      <recent name="D:\cinema-rebuild\cinema\screenings" />
+      <recent name="D:\cinema-rebuild\cinema\movies" />
       <recent name="D:\cinema\static\img" />
-      <recent name="E:\cinema\movies" />
-      <recent name="E:\cinema\tickets" />
-      <recent name="E:\cinema\static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\cinema-rebuild\cinema\tickets" />
       <recent name="E:\cinema\tickets" />
       <recent name="E:\cinema\static\css" />
       <recent name="E:\cinema\static\img" />
@@ -109,7 +178,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+        <option value="bundled-python-sdk-b086ea3bd674-c986f194a52a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.11799.209" />
       </set>
     </attachedChunks>
   </component>
@@ -146,6 +215,7 @@
       <workItem from="1710003946401" duration="5462000" />
       <workItem from="1710150906812" duration="5177000" />
       <workItem from="1710158921071" duration="4826000" />
+      <workItem from="1710429109170" duration="2994000" />
     </task>
     <servers />
   </component>

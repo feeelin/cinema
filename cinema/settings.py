@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'cinema',
         'USER': 'admin',
         'PASSWORD': 'admin',

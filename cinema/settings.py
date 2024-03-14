@@ -78,14 +78,12 @@ WSGI_APPLICATION = 'cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
+        'ENGINE': 'mssql',
         'NAME': 'cinema',
         'USER': 'SA',
         'PASSWORD': 'feelinMSSQL_2024',
-        'HOST': 'feelindev.ru',
-        'OPTIONS': {'driver': 'SQL Server Native Client 11.0',
-                    'MARS_Connection': True,
-                    'driver_supports_utf8': True,}
+        'HOST': 'mssql.feelindev.ru',
+        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
     }
 }
 

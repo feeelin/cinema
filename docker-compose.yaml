@@ -13,8 +13,7 @@ services:
 
   web:
     build: ./
-    command: sh -c "python manage.py makemigrations &&
-                    python manage.py migrate &&
+    command: sh -c "pip install pyodbc &&
                     python manage.py collectstatic &&
                     gunicorn web.wsgi:application --bind 0.0.0.0:8000"
     volumes:

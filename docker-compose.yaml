@@ -15,8 +15,7 @@ services:
     build:
       dockerfile: ./Dockerfile
       context: ./
-    command: sh -c "pip install pyodbc &&
-                    python manage.py collectstatic &&
+    command: sh -c "python manage.py collectstatic &&
                     gunicorn web.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - /web_django

@@ -84,7 +84,7 @@ DATABASES = {
         'USER': 'SA',
         'PASSWORD': 'feelinMSSQL_2024',
         'HOST': 'mssql.feelindev.ru',
-        'OPTIONS': {'driver': 'ODBC Driver 13 for SQL Server'}
+        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
     }
 }
 

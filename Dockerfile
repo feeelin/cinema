@@ -1,4 +1,4 @@
-FROM python:3.11
+FROM python:3.11.8-alpine3.19
 
 ADD odbcinst.ini /etc/odbcinst.ini
 RUN apt-get update
@@ -19,6 +19,9 @@ RUN source venv/bin/activate
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+
+COPY ./odbc.sh /web_django/
+RUN ./odbc.sh
 
 COPY ./requirements.txt /web_django/
 

@@ -1,16 +1,15 @@
 version: '3'
 services:
   
-  postgres:
-    image: postgres
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
     ports:
-      - "5432:5432"
+      - 1433:1433
     volumes:
-      - /var/lib/postgresql/data
+      - ~/apps/mssql/data:/var/lib/mssqlql/data
     environment:
-      POSTGRES_DB: "cinema"
-      POSTGRES_USER: "admin"
-      POSTGRES_PASSWORD: "admin"
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=feelinMSSQL_2024
 
   web:
     build: ./

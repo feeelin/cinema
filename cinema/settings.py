@@ -79,12 +79,12 @@ WSGI_APPLICATION = 'cinema.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
+        'ENGINE': 'mssql',
         'NAME': 'cinema',
-        'USER': 'admin',
-        'PASSWORD': 'admin',
+        'USER': 'SA',
+        'PASSWORD': 'feelinMSSQL_2024',
         'HOST': 'mssql.feelindev.ru',
-        'PORTS': '1432'
+        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
     }
 }
 

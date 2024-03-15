@@ -12,7 +12,9 @@ services:
       - SA_PASSWORD=feelinMSSQL_2024
 
   web:
-    build: ./
+    build:
+      dockerfile: ./Dockerfile
+      context: ./
     command: sh -c "pip install pyodbc &&
                     python manage.py collectstatic &&
                     gunicorn web.wsgi:application --bind 0.0.0.0:8000"

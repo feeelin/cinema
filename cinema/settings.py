@@ -84,12 +84,11 @@ DATABASES = {
         'USER': 'SA',
         'PASSWORD': 'feelinMSSQL_2024',
         'HOST': 'mssql.feelindev.ru',
-        'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}
+        'OPTIONS': {'driver': 'ODBC Driver 13 for SQL Server'}
     }
 }
 
 DATABASE_CONNECTION_POOLING = False
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators

@@ -81,7 +81,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'mssql',
         'NAME': 'cinema',
-        'USER': 'feelin',
+        'USER': 'SA',
         'PASSWORD': 'feelinMSSQL_2024',
         'HOST': 'mssql.feelindev.ru',
         'OPTIONS': {'driver': 'ODBC Driver 17 for SQL Server'}

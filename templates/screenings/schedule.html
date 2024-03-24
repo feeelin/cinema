@@ -24,7 +24,7 @@
                     </div>
                     <div class="screening-card-buttons-container">
                         <a href="/movie/{{ screening.film_id_id }}" class="button">О фильме</a>
-                        <a href="#" class="button">Купить билет</a>
+                        <a href="{% url 'tickets:buy' screening_id=screening.id %}" class="button">Купить билет</a>
                     </div>
                     </div>
                 {% endif %}

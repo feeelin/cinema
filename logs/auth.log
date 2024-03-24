@@ -1,1 +1,4 @@
 INFO:root:[2024.03.11 - 16:48:46] LOGOUT admin ID 2
+INFO:root:[2024.03.24 - 20:03:38] LOGIN feelin ID 1
+WARNING:django.request:Not Found: /favicon.ico
+INFO:django.utils.autoreload:E:\cinema\movies\services\get_current_and_next_movies.py changed, reloading.

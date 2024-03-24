@@ -16,6 +16,6 @@ def get_valid_screenings_with_time() -> ScreeningsWithTime:
         set(
             map(lambda x: x[0].date(), screenings.values_list('time'))
         )
-    )
+    )[::-1]
 
     return ScreeningsWithTime(screenings=screenings, screenings_time=screenings_time)

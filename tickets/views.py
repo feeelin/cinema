@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render
 from tickets.models import Ticket
@@ -7,6 +8,7 @@ from tickets.services.save_users_tickets import save_users_tickets
 # Create your views here
 
 
+@login_required(login_url='users:login')
 def buy(request, screening_id):
     if request.method == 'POST':
         return save_users_tickets(request, screening_id)

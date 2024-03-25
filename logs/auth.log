@@ -2,3 +2,13 @@ INFO:root:[2024.03.11 - 16:48:46] LOGOUT admin ID 2
 INFO:root:[2024.03.24 - 20:03:38] LOGIN feelin ID 1
 WARNING:django.request:Not Found: /favicon.ico
 INFO:django.utils.autoreload:E:\cinema\movies\services\get_current_and_next_movies.py changed, reloading.
+INFO:root:[2024.03.25 - 12:19:41] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:19:44] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:19:45] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:19:47] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:19:53] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:20:10] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:20:26] LOGIN feelin ID 1
+INFO:root:[2024.03.25 - 12:47:52] LOGOUT feelin ID 1
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:[2024.03.25 - 12:59:55] LOGOUT feelin ID 1

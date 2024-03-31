@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'cinema',
         'USER': 'admin',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
+        'HOST': 'postgres.feelindev.ru',
         'PORTS': '5432'
     }
 }

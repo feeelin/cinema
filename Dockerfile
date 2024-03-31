@@ -1,6 +1,5 @@
 FROM python:3.11.8-alpine3.19
 
-ADD odbcinst.ini /etc/odbcinst.ini
 RUN apt-get update
 RUN apt-get install -y tdsodbc unixodbc-dev
 RUN apt install unixodbc-bin -y

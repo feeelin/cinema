@@ -13,8 +13,6 @@ FROM python
 
 RUN mkdir /web_django
 WORKDIR /web_django
-RUN python -m venv venv
-RUN source venv/bin/activate
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1

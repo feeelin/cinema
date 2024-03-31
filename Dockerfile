@@ -1,12 +1,12 @@
-FROM python:3.11.8-alpine3.19
+FROM python
 
-RUN apt-get update
-RUN apt-get install -y tdsodbc unixodbc-dev
-RUN apt install unixodbc-bin -y
-RUN apt-get clean -y
-
-RUN apt-get install libodbc2
-RUN apt-get install unixodbc-dev
+#RUN apt-get update
+#RUN apt-get install -y tdsodbc unixodbc-dev
+#RUN apt install unixodbc-bin -y
+#RUN apt-get clean -y
+#
+#RUN apt-get install libodbc2
+#RUN apt-get install unixodbc-dev
 
 
 

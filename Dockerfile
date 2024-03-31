@@ -17,8 +17,8 @@ WORKDIR /web_django
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY ./odbc.sh /web_django/
-RUN ./odbc.sh
+#COPY ./odbc.sh /web_django/
+#RUN ./odbc.sh
 
 COPY ./requirements.txt /web_django/
 
